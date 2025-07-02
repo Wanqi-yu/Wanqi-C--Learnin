@@ -20,9 +20,22 @@ namespace ConsoleApp1
             2.不能使用C#中的关键字作为变量名
             3.变量名严格的区分大小写，User和user是两个不同的变量
             4.尽量使用描述性强的英语单词
-            数据类型:在C#中，数据类型是编程的基础，用于定义变量和方法可以存储的数据种类。C#的数据类型分为两大类:值类型和引用类型，此外，C#还支持一些特殊
-            的类型，如指针类型和可空类型
-            值类型(Value Types):值类型直接存储数据值，存储在栈内存中，具有高性能的特点
+             */
+            /*
+            
+            数据类型:指变量可以存储的数据的类型,在C#中，数据类型分为以下几种
+            1.值类型(Values types):值类型变量可以直接分配给一个值，他们是从类Syestem.ValueType派生的类型，
+            值类型变量直接存储数据本身，常见的值类型有整数类型(int, long, short等)、浮点数类型(float, double等)、字符类型(char)和布尔类型(bool)等
+            如果想要获得一个类型或一个变量准确尺寸，可以使用sizeof运算符来获取该类型的字节大小
+            如果相应确认一个变量的数据类型，可以使用GetType方法来获取
+            2.引用类型(Reference types):引用类型变量存储的是对数据的引用，而不是数据本身，引用类型变量是从类System.Object派生的类型，
+            换句话说，引用类型变量存储的是数据在内存中的地址，而不是数据本身的值，使用多个变量时，多个变量可以引用同一个对象，
+            这样就可以在多个地方访问和修改同一个对象的值
+            C#常见的引用类型有字符串(string)、数组(array)和类(class)等
+            对象类型(Object)Object类型是C#中所有类型的基类，所有类型都可以被视为Object类型
+            3.动态类型(Dynamic types):动态类型是C#中的一种特殊类型，它允许在运行时动态地确定变量的类型，
+            声明动态类型变量时，可以使用关键字dynamic，动态类型变量可以存储任何类型的值，并且在运行时可以改变其类型
+            字符串类型(String):字符串类型是C#中用于存储文本数据的类型，字符串是不可变的，一旦创建就不能修改，
              */
             //定义一个整数类型的变量
             int age = 25;
@@ -34,6 +47,40 @@ namespace ConsoleApp1
             //字符串插值 在C#中，提供了可以直接在字符串中使用变量的方法，需要在字符串开头加一个美元符号，这样就可以在输出的字符串中直接使用变量
             Console.WriteLine($"My name is {name},I'm {age} years old,My height is {height}");
             float weight = 85.5f;
+            //Day3 运算符与表达式
+            /*运算符:运算符是用于执行特定操作的符号或关键字，C#中有多种类型的运算符，包括算术运算符、关系运算符、逻辑运算符等
+             算术运算符:用于执行基本的数学运算，如加法、减法、乘法和除法等
+             关系运算符:用于比较两个值之间的关系，如大于、小于、等于等
+             逻辑运算符:用于执行逻辑操作，如与、或、非等
+             */
+            //定义两个整数变量
+            int a = 10;
+            int b = 5;
+            //算术运算符
+            int sum = a + b; //加法
+            int difference = a - b; //减法
+            int product = a * b; //乘法
+            int quotient = a / b; //除法
+            int remainder = a % b; //取余
+            //输出结果 使用字符串插值输出结果
+            Console.WriteLine($"Sum:{sum}, Difference:{difference}, Product:{product}, Quotient:{quotient}, Remainder:{remainder}");
+            //关系运算符
+            bool isEqual = (a == b); //等于
+            bool isNotEqual = (a != b); //不等于
+            bool isGreater = (a > b); //大于
+            bool isLess = (a < b); //小于
+            bool isGreaterOrEqual = (a >= b); //大于等于
+            bool isLessOrEqual = (a <= b); //小于等于
+            //输出关系运算符结果
+            Console.WriteLine($"Is Equal:{isEqual}, Is Not Equal:{isNotEqual}, Is Greater:{isGreater}, Is Less:{isLess}, Is Greater Or Equal:{isGreaterOrEqual}, Is Less Or Equal:{isLessOrEqual}");
+            //逻辑运算符
+            bool andResult = (a > 0 && b > 0); //与运算
+            Console.WriteLine($"And Result: {andResult}");
+            bool orResult = (a > 0 || b < 0); //或运算
+            Console.WriteLine(a > 0 || b < 0 ? "Or Result: True" : "Or Result: False");
+            bool notResult = !(a < b); //非运算
+            Console.WriteLine(a < b ? "Not Result: False" : "Not Result: True");
+            
         }
     }
 }
