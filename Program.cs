@@ -80,7 +80,119 @@ namespace ConsoleApp1
             Console.WriteLine(a > 0 || b < 0 ? "Or Result: True" : "Or Result: False");
             bool notResult = !(a < b); //非运算
             Console.WriteLine(a < b ? "Not Result: False" : "Not Result: True");
-            
+            //Daty4 if条件语句
+            /*在编程中，条件判断语句是控制程序流程的关键部分，它允许程序根据不同的条件执行不同的代码块，其中if语句是最常用的条件判断语句之一*/
+            /*if语句，是C#中用于执行条件判断的语句，它允许程序根据条件的真假来决定是否执行某些代码块，
+             一个if语句通常由一个条件表达式和一个代码块组成，当条件表达式为true时，代码块中的代码将被执行
+             基本语法格式如下
+            if (condition)
+            {
+                // 当条件为true时执行的代码块
+            }
+            下面是一个简单的if语句示例
+             */
+            int number = 10;
+            if (number > 0)
+            {
+                Console.WriteLine("Number is positive.");
+            }
+            //else语句,else语句是if语句的一个扩展，它允许程序在条件不满足时执行另一段代码块，
+            //else语句通常与if语句一起使用，用于处理条件不满足的情况，基本语法格式如下
+            /*if (condition)
+            {
+                // 当条件为true时执行的代码块
+            }
+            else
+            {
+                // 当条件为false时执行的代码块
+            }*/
+            if (number < 0)
+            {
+                Console.WriteLine("Number is negative.");
+            }
+            else
+            {
+                Console.WriteLine("Number is non-negative.");
+            }
+            //else if语句,else if语句是if语句的一个扩展，它允许程序在多个条件之间进行选择，
+            //当有多个条件需要判断时，可以使用else if语句来处理不同的情况，基本语法格式如下
+            /*if (condition1)
+            {
+                // 当条件1为true时执行的代码块
+            }
+            else if (condition2)
+            {
+                // 当条件2为true时执行的代码块
+            }
+            else
+            {
+                // 当所有条件都不满足时执行的代码块
+            }*/
+            if (number > 0)
+            {
+                Console.WriteLine("Number is positive.");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine("Number is negative.");
+            }
+            else
+            {
+                Console.WriteLine("Number is zero.");
+            }
+            //嵌套if语句,嵌套if语句是指在一个if语句的代码块中再包含另一个if语句，这种结构允许程序在满足某个条件时进一步判断其他条件，
+            //基本语法格式如下
+            bool isEven = true; // 
+
+            if (number > 0)
+                { 
+                    if (isEven)
+                    {
+                        Console.WriteLine("Number is positive and even.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Number is positive and odd.");
+                }
+                //使用逻辑运算符,在C#中，可以使用逻辑运算符来组合多个条件，从而实现更复杂的条件判断，
+                //逻辑运算符包括与（&&）、或（||）和非（!）等，
+                //与运算符（&&）用于判断多个条件是否同时为true，
+                //如果所有条件都为true，则整个表达式为true，否则为false，
+                //或运算符（||）用于判断多个条件中是否至少有一个为true，
+                //如果至少有一个条件为true，则整个表达式为true，否则为false，
+                //非运算符（!）用于对条件进行取反操作，如果条件为true，则取反后为false，反之亦然
+                //使用逻辑运算符进行条件判断
+                if (number > 0 && isEven)
+                {
+                    Console.WriteLine("Number is positive and even.");
+                }
+                else if (number > 0 && !isEven)
+                {
+                    Console.WriteLine("Number is positive and odd.");
+                }
+                else if (number < 0 || number == 0)
+                {
+                    Console.WriteLine("Number is negative or zero.");
+                }
+                //Day 5 Switch语句
+                /*
+                 在C#中，Switch语句是一种根据不同的条件执行不同代码块的控制流结构，它允许程序根据一个表达式的值，
+                选择执行与该值相关联的特定代码块
+                基本语法如下
+                Switch (表达式)
+                {
+                    case value1
+                    //代码块
+                        break
+                    case value2
+                    //代码块
+                        break
+                    default
+                        //默认代码块
+                        break
+                }
+                 */
+            }
         }
     }
 }
