@@ -145,14 +145,14 @@ namespace ConsoleApp1
             bool isEven = true; // 
 
             if (number > 0)
-                { 
-                    if (isEven)
-                    {
-                        Console.WriteLine("Number is positive and even.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Number is positive and odd.");
+            {
+                if (isEven)
+                {
+                    Console.WriteLine("Number is positive and even.");
+                }
+                else
+                {
+                    Console.WriteLine("Number is positive and odd.");
                 }
                 //使用逻辑运算符,在C#中，可以使用逻辑运算符来组合多个条件，从而实现更复杂的条件判断，
                 //逻辑运算符包括与（&&）、或（||）和非（!）等，
@@ -191,7 +191,43 @@ namespace ConsoleApp1
                         //默认代码块
                         break
                 }
+                下面是一个简单的Switch语句示例
                  */
+                int dayOfWeek = 3; // 假设1表示星期一，2表示星期二，依此类推
+                switch (dayOfWeek)
+                {
+                    case 1:
+                        Console.WriteLine("Today is Monday.");
+                        break;
+                    case 2:
+                        Console.WriteLine("Today is Tuesday.");
+                        break;
+                    case 3:
+                        Console.WriteLine("Today is Wednesday.");
+                        break;
+                    case 4:
+                        Console.WriteLine("Today is Thursday.");
+                        break;
+                    case 5:
+                        Console.WriteLine("Today is Friday.");
+                        break;
+                    case 6:
+                        Console.WriteLine("Today is Saturday.");
+                        break;
+                    case 7:
+                        Console.WriteLine("Today is Sunday.");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid day of the week.");
+                        break;
+                }
+                //在上面的示例中，我们使用Switch语句根据dayOfWeek的值来输出对应的星期几，
+                //每个case语句后面都有一个break语句，用于终止Switch语句的执行，如果没有break语句，程序将继续执行下一个case语句，
+                //这可能导致意外的结果
+                //如果没有匹配到任何case语句，可以使用default语句来处理默认情况，
+                //default语句通常放在Switch语句的最后，用于处理所有未匹配到的情况
+                //在上面的示例中，如果dayOfWeek的值不是1到7之间的任何一个值，将输出"Invalid day of the week."，这是因为没有匹配到任何case语句
+
             }
         }
     }
